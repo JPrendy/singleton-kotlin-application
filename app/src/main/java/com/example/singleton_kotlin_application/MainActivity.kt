@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 
+@Suppress("UNUSED_PARAMETER")
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         println(Singleton.showMessage())
         val personOne = StaticClass(10)
         println(personOne.score)
+        personOne.score2 = 10
         val textView = findViewById<TextView>(R.id.singletonValue)
         textView.text = personOne.score.toString()
         val textView2 = findViewById<TextView>(R.id.staticValue)
