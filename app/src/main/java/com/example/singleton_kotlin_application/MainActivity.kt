@@ -1,7 +1,9 @@
 package com.example.singleton_kotlin_application
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -15,5 +17,10 @@ class MainActivity : AppCompatActivity() {
         textView.text = personOne.score.toString()
         val textView2 = findViewById<TextView>(R.id.staticValue)
         textView2.text = Singleton.showMessage()
+    }
+
+    fun changeActivity(view: View) {
+        val intent = Intent(this, FinalActivity::class.java)
+        startActivity(intent)
     }
 }
