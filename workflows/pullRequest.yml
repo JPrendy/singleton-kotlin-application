@@ -1,0 +1,25 @@
+name: CI pull request
+
+on:
+  push: 
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  build:
+  # runs on Big Sur virtual environment
+    runs-on: macos-11.0
+
+    steps:
+    - uses: actions/checkout@v2.3.4
+
+    - name: Android Emulator Runner
+      uses: ReactiveCircus/android-emulator-runner@v2.19.0
+      with:
+        api-level: 28
+        script: ./gradlew connectedCheck
