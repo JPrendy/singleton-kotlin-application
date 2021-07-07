@@ -5,7 +5,7 @@ object Singleton {
         println("Singleton initialized")
     }
 
-    var message = "Kotlin rock"
+    var message = "Singletons rock"
 
     fun showMessage(): String {
         return message
@@ -21,7 +21,7 @@ class Test {
 
 fun main() {
     Singleton.showMessage()
-    Singleton.message = "Kotlin is cool"
+    Singleton.message = "Singletons are cool"
 
     val test = Test()
 }
