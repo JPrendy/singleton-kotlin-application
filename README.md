@@ -28,7 +28,7 @@ A singleton’s two most common use cases are:
 
 - Unit testing requires clean isolated environments. This can become a nightmare when there’s a global mutable state hanging around as it will only tie up the states together. You’ll never be sure if the global state was changed in the previous unit test. So, you’ll have to set all globals to predetermined values before every test. That’s an overhead.
 
-- Violates Encapsulation, encapsulation refers to restricting direct access to data.
+- Violates Encapsulation, encapsulation refers to restricting direct access to data. To learn more about encapsulation, read [Encapsulation](https://dev.to/chrisvasqm/how-i-finally-understood-encapsulation-i9m).
 
 - Keep global variables to a bare minimum in the worst-case scenario in order to avoid an unmanageable and chaotic codebase.
 
